@@ -1,5 +1,32 @@
 {
   "$schema": "https://opencode.ai/config.json",
+	"shell": "/bin/bash",
+	"snapshots": true,
+	"formatter": true,
+	"watcher": {
+    "ignore": [".opencode/**"],
+  },
+	"websearch": {
+    "provider": "random"
+  },
+	"media": {
+    "image": {
+      "auto_resize": true,
+      "max_width": 2000,
+      "max_height": 2000,
+      "max_base64_bytes": 5242880
+    }
+  },
+	"compaction": {
+    "auto": true,
+    "keep": {
+      "tokens": 15000
+    },
+    "buffer": 20000
+  },
+	"worktree": {
+    "directory": ".lane/trees"
+  },
   "provider": {
     "wormsoft": {
       "npm": "@ai-sdk/openai-compatible",
@@ -23,6 +50,19 @@
       "models": {
         "minimax/minimax-m3": {
           "name": "PolzaCode"
+        }
+      }
+    }
+  },
+	"mcp": {
+    "servers": {
+			"context7": {
+        "type": "remote",
+        "url": "https://mcp.context7.com/mcp",
+        "oauth": false,
+				"disabled": true,
+        "headers": {
+          "Authorization": "Bearer {env:CONTEXT7_API_KEY}" // Ключ хранится в отдельном файле
         }
       }
     }
