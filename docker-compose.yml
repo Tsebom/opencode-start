@@ -52,8 +52,6 @@ services:
 
 networks:
   agent-net:
-  browser-test-net:
-    internal: true
 
 volumes:
   opencode-home:
