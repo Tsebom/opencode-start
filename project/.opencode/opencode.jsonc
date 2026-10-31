@@ -33,11 +33,38 @@
       "name": "My Custom Provider",
       "options": {
         "baseURL": "https://ai.wormsoft.ru/api/gpt",
-        "apiKey": "{env:WORMSOFT_API_KEY}" // Ключ хранится в отдельном файле
+        "apiKey": "{env:WORMSOFT_API_KEY}" // Ключ хранится в отдельном файле .env
       },
       "models": {
         "wormsoft/mine/onlycode": {
-          "name": "OnlyCode"
+          "name": "MyCode"
+        },
+				"wormsoft/agent/low": {
+          "name": "LowAgent"
+        },
+				"wormsoft/agent/medium": {
+          "name": "MediumAgent"
+        },
+				"wormsoft/agent/high": {
+          "name": "HighAgent"
+        },
+				"wormsoft/code/low": {
+          "name": "LowCode"
+        },
+				"wormsoft/code/medium": {
+          "name": "MediumCode"
+        },
+				"wormsoft/code/high": {
+          "name": "HighCode"
+        },
+				"wormsoft/vision/low": {
+          "name": "LowVision"
+        },
+				"wormsoft/vision/medium": {
+          "name": "MediumVision"
+        },
+				"wormsoft/codevision/high": {
+          "name": "HighVision"
         }
       }
     },
@@ -45,7 +72,7 @@
       "npm": "@ai-sdk/openai-compatible",
       "options": {
         "baseURL": "https://polza.ai/api/v1",
-        "apiKey": "{env:POLZA_API_KEY}" // Ключ хранится в отдельном файле
+        "apiKey": "{env:POLZA_API_KEY}" // Ключ хранится в отдельном файле .env
       },
       "models": {
         "minimax/minimax-m3": {
@@ -60,9 +87,9 @@
         "type": "remote",
         "url": "https://mcp.context7.com/mcp",
         "oauth": false,
-				"disabled": true,
+				"disabled": false,
         "headers": {
-          "Authorization": "Bearer {env:CONTEXT7_API_KEY}" // Ключ хранится в отдельном файле
+          "Authorization": "Bearer {env:CONTEXT7_API_KEY}" // Ключ хранится в отдельном файле .env
         }
       }
     }
